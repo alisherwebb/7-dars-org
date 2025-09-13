@@ -10,14 +10,14 @@ function Modal({ setShowModal, todos, itemId, setTodos }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    if (formData.get("todo-text") != activeTodoText) {
+    if (formData.get("todo-text ") != activeTodoText) {
       setTodos((prev) => {
         const newTodos = prev.map((todo) => {
           return itemId == todo.id
             ? { ...todo, text: formData.get("todo-text") }
             : { ...todo };
         });
-        localStorage.setItem("todos", JSON.stringify(newTodos))
+        localStorage.setItem("todos", JSON.stringify(newTodos));
         return newTodos;
       });
       toast.success("Muvaffaqiyatli yangilandi!");

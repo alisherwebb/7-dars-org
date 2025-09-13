@@ -4,8 +4,8 @@ import Form from "./components/Form";
 import List from "./components/List";
 
 function App() {
-  const [todos, setTodos] = useState(()=> {
-    return JSON.parse(localStorage.getItem("todos")) || []
+  const [todos, setTodos] = useState(() => {
+    return JSON.parse(localStorage.getItem("todos")) || [];
   });
 
   return (
